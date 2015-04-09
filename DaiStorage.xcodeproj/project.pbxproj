@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		1C0A71FA1AD52DFE00D357FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71F91AD52DFE00D357FA /* main.m */; };
 		1C0A71FD1AD52DFE00D357FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */; };
-		1C0A72001AD52DFE00D357FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71FF1AD52DFE00D357FA /* ViewController.m */; };
-		1C0A72031AD52DFE00D357FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72011AD52DFE00D357FA /* Main.storyboard */; };
 		1C0A72051AD52DFE00D357FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72041AD52DFE00D357FA /* Images.xcassets */; };
-		1C0A72081AD52DFE00D357FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72061AD52DFE00D357FA /* LaunchScreen.xib */; };
 		1C0A72141AD52DFE00D357FA /* DaiStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72131AD52DFE00D357FA /* DaiStorageTests.m */; };
+		1C0A72201AD52E3900D357FA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A721E1AD52E3900D357FA /* MainViewController.m */; };
+		1C0A72211AD52E3900D357FA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A721F1AD52E3900D357FA /* MainViewController.xib */; };
+		1C0A72231AD52E8500D357FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72221AD52E8500D357FA /* Default-568h@2x.png */; };
+		1C0A72271AD52F8600D357FA /* DaiStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72261AD52F8600D357FA /* DaiStorage.m */; };
+		1C0A722A1AD5319500D357FA /* Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72291AD5319500D357FA /* Misc.m */; };
+		1C4FD5571AD7B5E000AF1764 /* DaiStorageArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FD5561AD7B5E000AF1764 /* DaiStorageArray.m */; };
+		1CAB7E411AD618D4001E743F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB7E401AD618D4001E743F /* Account.m */; };
+		1CAB7E441AD62B2E001E743F /* DaiStoragePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB7E431AD62B2E001E743F /* DaiStoragePath.m */; };
+		1CF74D9B1AD78419001670D5 /* Account2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF74D9A1AD78419001670D5 /* Account2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +38,27 @@
 		1C0A71F91AD52DFE00D357FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1C0A71FB1AD52DFE00D357FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C0A71FE1AD52DFE00D357FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1C0A71FF1AD52DFE00D357FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1C0A72021AD52DFE00D357FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C0A72041AD52DFE00D357FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1C0A72071AD52DFE00D357FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1C0A720D1AD52DFE00D357FA /* DaiStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaiStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0A72121AD52DFE00D357FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C0A72131AD52DFE00D357FA /* DaiStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaiStorageTests.m; sourceTree = "<group>"; };
+		1C0A721D1AD52E3900D357FA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		1C0A721E1AD52E3900D357FA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1C0A721F1AD52E3900D357FA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		1C0A72221AD52E8500D357FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1C0A72251AD52F8600D357FA /* DaiStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorage.h; sourceTree = "<group>"; };
+		1C0A72261AD52F8600D357FA /* DaiStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorage.m; sourceTree = "<group>"; };
+		1C0A72281AD5319500D357FA /* Misc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Misc.h; sourceTree = "<group>"; };
+		1C0A72291AD5319500D357FA /* Misc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Misc.m; sourceTree = "<group>"; };
+		1C4FD5551AD7B5E000AF1764 /* DaiStorageArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorageArray.h; sourceTree = "<group>"; };
+		1C4FD5561AD7B5E000AF1764 /* DaiStorageArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorageArray.m; sourceTree = "<group>"; };
+		1CAB7E3F1AD618D4001E743F /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		1CAB7E401AD618D4001E743F /* Account.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
+		1CAB7E421AD62B2E001E743F /* DaiStoragePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStoragePath.h; sourceTree = "<group>"; };
+		1CAB7E431AD62B2E001E743F /* DaiStoragePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStoragePath.m; sourceTree = "<group>"; };
+		1CF2E9E41AD79E9B00DA6719 /* DaiStorageDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaiStorageDefine.h; sourceTree = "<group>"; };
+		1CF74D991AD78419001670D5 /* Account2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account2.h; sourceTree = "<group>"; };
+		1CF74D9A1AD78419001670D5 /* Account2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +100,19 @@
 		1C0A71F61AD52DFE00D357FA /* DaiStorage */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A72241AD52EFD00D357FA /* DaiStorage */,
+				1C0A72281AD5319500D357FA /* Misc.h */,
+				1C0A72291AD5319500D357FA /* Misc.m */,
+				1CAB7E3F1AD618D4001E743F /* Account.h */,
+				1CAB7E401AD618D4001E743F /* Account.m */,
+				1CF74D991AD78419001670D5 /* Account2.h */,
+				1CF74D9A1AD78419001670D5 /* Account2.m */,
 				1C0A71FB1AD52DFE00D357FA /* AppDelegate.h */,
 				1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */,
-				1C0A71FE1AD52DFE00D357FA /* ViewController.h */,
-				1C0A71FF1AD52DFE00D357FA /* ViewController.m */,
-				1C0A72011AD52DFE00D357FA /* Main.storyboard */,
+				1C0A721D1AD52E3900D357FA /* MainViewController.h */,
+				1C0A721E1AD52E3900D357FA /* MainViewController.m */,
+				1C0A721F1AD52E3900D357FA /* MainViewController.xib */,
 				1C0A72041AD52DFE00D357FA /* Images.xcassets */,
-				1C0A72061AD52DFE00D357FA /* LaunchScreen.xib */,
 				1C0A71F71AD52DFE00D357FA /* Supporting Files */,
 			);
 			path = DaiStorage;
@@ -96,6 +121,7 @@
 		1C0A71F71AD52DFE00D357FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A72221AD52E8500D357FA /* Default-568h@2x.png */,
 				1C0A71F81AD52DFE00D357FA /* Info.plist */,
 				1C0A71F91AD52DFE00D357FA /* main.m */,
 			);
@@ -117,6 +143,20 @@
 				1C0A72121AD52DFE00D357FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C0A72241AD52EFD00D357FA /* DaiStorage */ = {
+			isa = PBXGroup;
+			children = (
+				1CF2E9E41AD79E9B00DA6719 /* DaiStorageDefine.h */,
+				1C0A72251AD52F8600D357FA /* DaiStorage.h */,
+				1C0A72261AD52F8600D357FA /* DaiStorage.m */,
+				1C4FD5551AD7B5E000AF1764 /* DaiStorageArray.h */,
+				1C4FD5561AD7B5E000AF1764 /* DaiStorageArray.m */,
+				1CAB7E421AD62B2E001E743F /* DaiStoragePath.h */,
+				1CAB7E431AD62B2E001E743F /* DaiStoragePath.m */,
+			);
+			path = DaiStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C0A72031AD52DFE00D357FA /* Main.storyboard in Resources */,
-				1C0A72081AD52DFE00D357FA /* LaunchScreen.xib in Resources */,
 				1C0A72051AD52DFE00D357FA /* Images.xcassets in Resources */,
+				1C0A72211AD52E3900D357FA /* MainViewController.xib in Resources */,
+				1C0A72231AD52E8500D357FA /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,8 +259,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C0A72001AD52DFE00D357FA /* ViewController.m in Sources */,
+				1C0A722A1AD5319500D357FA /* Misc.m in Sources */,
 				1C0A71FD1AD52DFE00D357FA /* AppDelegate.m in Sources */,
+				1CAB7E441AD62B2E001E743F /* DaiStoragePath.m in Sources */,
+				1C0A72201AD52E3900D357FA /* MainViewController.m in Sources */,
+				1CF74D9B1AD78419001670D5 /* Account2.m in Sources */,
+				1C4FD5571AD7B5E000AF1764 /* DaiStorageArray.m in Sources */,
+				1CAB7E411AD618D4001E743F /* Account.m in Sources */,
+				1C0A72271AD52F8600D357FA /* DaiStorage.m in Sources */,
 				1C0A71FA1AD52DFE00D357FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +288,6 @@
 			targetProxy = 1C0A720E1AD52DFE00D357FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1C0A72011AD52DFE00D357FA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C0A72021AD52DFE00D357FA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1C0A72061AD52DFE00D357FA /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1C0A72071AD52DFE00D357FA /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1C0A72151AD52DFE00D357FA /* Debug */ = {
@@ -412,6 +439,7 @@
 				1C0A72191AD52DFE00D357FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C0A721A1AD52DFE00D357FA /* Build configuration list for PBXNativeTarget "DaiStorageTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +448,7 @@
 				1C0A721C1AD52DFE00D357FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
