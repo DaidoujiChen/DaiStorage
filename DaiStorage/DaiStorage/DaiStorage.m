@@ -48,7 +48,12 @@
                     [newProperty addObject:[weakSelf reworkByExportRule:@{ DaiStoragePropertyType:arrayProperty.allowClass } reworkItem:obj]];
                 }
             }];
-            currentProperty = newProperty;
+            if (newProperty.count) {
+                currentProperty = newProperty;
+            }
+            else {
+                currentProperty = nil;
+            }
         }
         //反之則看需不需要經過處理
         else {

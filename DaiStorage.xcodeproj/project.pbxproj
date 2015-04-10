@@ -17,9 +17,19 @@
 		1C0A72271AD52F8600D357FA /* DaiStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72261AD52F8600D357FA /* DaiStorage.m */; };
 		1C0A722A1AD5319500D357FA /* Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72291AD5319500D357FA /* Misc.m */; };
 		1C4FD5571AD7B5E000AF1764 /* DaiStorageArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FD5561AD7B5E000AF1764 /* DaiStorageArray.m */; };
+		1C78095C1AD7E145002C6F12 /* DaiStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72261AD52F8600D357FA /* DaiStorage.m */; };
+		1C78095E1AD7E145002C6F12 /* DaiStorageArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C4FD5561AD7B5E000AF1764 /* DaiStorageArray.m */; };
+		1C7809601AD7E145002C6F12 /* DaiStoragePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB7E431AD62B2E001E743F /* DaiStoragePath.m */; };
+		1C7809621AD7E145002C6F12 /* Misc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72291AD5319500D357FA /* Misc.m */; };
+		1C7809641AD7E145002C6F12 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB7E401AD618D4001E743F /* Account.m */; };
+		1C7809661AD7E145002C6F12 /* Account2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF74D9A1AD78419001670D5 /* Account2.m */; };
 		1CAB7E411AD618D4001E743F /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB7E401AD618D4001E743F /* Account.m */; };
 		1CAB7E441AD62B2E001E743F /* DaiStoragePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CAB7E431AD62B2E001E743F /* DaiStoragePath.m */; };
 		1CF74D9B1AD78419001670D5 /* Account2.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CF74D9A1AD78419001670D5 /* Account2.m */; };
+		628C3B9B9947003A718CD3BA /* DaiStorageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 580C672DC9F18547070920B9 /* DaiStorageTest.m */; };
+		7441069DC4664DD3157805FF /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD9D0D1BF4E897642CF2488 /* libPods-Tests.a */; };
+		BB263893632B88844540AB79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4CF93DE6383EF1C59C3AC4 /* main.m */; };
+		D8C54F76CA829C48F0F95C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40961755F5C77A781755D15 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +40,17 @@
 			remoteGlobalIDString = 1C0A71F31AD52DFE00D357FA;
 			remoteInfo = DaiStorage;
 		};
+		37F0E4E2C35D6388BFD3285B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C0A71EC1AD52DFE00D357FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C0A71F31AD52DFE00D357FA;
+			remoteInfo = DaiStorage;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001886EA815B1B87686399DC /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		1C0A71F41AD52DFE00D357FA /* DaiStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0A71F81AD52DFE00D357FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C0A71F91AD52DFE00D357FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +77,12 @@
 		1CF2E9E41AD79E9B00DA6719 /* DaiStorageDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DaiStorageDefine.h; sourceTree = "<group>"; };
 		1CF74D991AD78419001670D5 /* Account2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account2.h; sourceTree = "<group>"; };
 		1CF74D9A1AD78419001670D5 /* Account2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Account2.m; sourceTree = "<group>"; };
+		580C672DC9F18547070920B9 /* DaiStorageTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DaiStorageTest.m; path = Tests/DaiStorageTest.m; sourceTree = "<group>"; };
+		5ABBDB1D7BB0D7B84A894649 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BD9D0D1BF4E897642CF2488 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40961755F5C77A781755D15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BC1A7D1BE8FCB4F510F0BC60 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE4CF93DE6383EF1C59C3AC4 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tests/main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,15 +100,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5EC074120E316E058A64228 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8C54F76CA829C48F0F95C70 /* Foundation.framework in Frameworks */,
+				7441069DC4664DD3157805FF /* libPods-Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11121FFBBE0D9B9217901079 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				EE4CF93DE6383EF1C59C3AC4 /* main.m */,
+				580C672DC9F18547070920B9 /* DaiStorageTest.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
 		1C0A71EB1AD52DFE00D357FA = {
 			isa = PBXGroup;
 			children = (
 				1C0A71F61AD52DFE00D357FA /* DaiStorage */,
 				1C0A72101AD52DFE00D357FA /* DaiStorageTests */,
 				1C0A71F51AD52DFE00D357FA /* Products */,
+				795263AA10AB6A93DE22B668 /* Frameworks */,
+				11121FFBBE0D9B9217901079 /* Tests */,
+				E6664358EC204A35A30DB687 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +138,7 @@
 			children = (
 				1C0A71F41AD52DFE00D357FA /* DaiStorage.app */,
 				1C0A720D1AD52DFE00D357FA /* DaiStorageTests.xctest */,
+				5ABBDB1D7BB0D7B84A894649 /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +205,32 @@
 			path = DaiStorage;
 			sourceTree = "<group>";
 		};
+		21C73C6B8202F415EAD29118 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B40961755F5C77A781755D15 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		795263AA10AB6A93DE22B668 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				21C73C6B8202F415EAD29118 /* iOS */,
+				8BD9D0D1BF4E897642CF2488 /* libPods-Tests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E6664358EC204A35A30DB687 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				001886EA815B1B87686399DC /* Pods-Tests.release.xcconfig */,
+				BC1A7D1BE8FCB4F510F0BC60 /* Pods-Tests.debug.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,6 +269,26 @@
 			productReference = 1C0A720D1AD52DFE00D357FA /* DaiStorageTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5B7DB57BFCB01B0195865561 /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6930AEEC9606B05F4118A9F /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				5B0C0F65F84D6260E39DDD31 /* Check Pods Manifest.lock */,
+				60CC60C4081150127CB2E09A /* Sources */,
+				F5EC074120E316E058A64228 /* Frameworks */,
+				D92ADCEC5198D9B5FB575B6C /* Resources */,
+				1AAFABB19957C5A4F2CFC73B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB7113FFE621A8C3749483EA /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 5ABBDB1D7BB0D7B84A894649 /* Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,6 +322,7 @@
 			targets = (
 				1C0A71F31AD52DFE00D357FA /* DaiStorage */,
 				1C0A720C1AD52DFE00D357FA /* DaiStorageTests */,
+				5B7DB57BFCB01B0195865561 /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +345,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D92ADCEC5198D9B5FB575B6C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AAFABB19957C5A4F2CFC73B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B0C0F65F84D6260E39DDD31 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C0A71F01AD52DFE00D357FA /* Sources */ = {
@@ -279,6 +412,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		60CC60C4081150127CB2E09A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C78095C1AD7E145002C6F12 /* DaiStorage.m in Sources */,
+				1C78095E1AD7E145002C6F12 /* DaiStorageArray.m in Sources */,
+				1C7809601AD7E145002C6F12 /* DaiStoragePath.m in Sources */,
+				1C7809621AD7E145002C6F12 /* Misc.m in Sources */,
+				1C7809641AD7E145002C6F12 /* Account.m in Sources */,
+				1C7809661AD7E145002C6F12 /* Account2.m in Sources */,
+				BB263893632B88844540AB79 /* main.m in Sources */,
+				628C3B9B9947003A718CD3BA /* DaiStorageTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,9 +435,31 @@
 			target = 1C0A71F31AD52DFE00D357FA /* DaiStorage */;
 			targetProxy = 1C0A720E1AD52DFE00D357FA /* PBXContainerItemProxy */;
 		};
+		CB7113FFE621A8C3749483EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DaiStorage;
+			target = 1C0A71F31AD52DFE00D357FA /* DaiStorage */;
+			targetProxy = 37F0E4E2C35D6388BFD3285B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0B2E34207D3322142B931E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC1A7D1BE8FCB4F510F0BC60 /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
 		1C0A72151AD52DFE00D357FA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -420,6 +590,22 @@
 			};
 			name = Release;
 		};
+		84D118FC5DB1C79D9414D2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 001886EA815B1B87686399DC /* Pods-Tests.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -446,6 +632,15 @@
 			buildConfigurations = (
 				1C0A721B1AD52DFE00D357FA /* Debug */,
 				1C0A721C1AD52DFE00D357FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6930AEEC9606B05F4118A9F /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84D118FC5DB1C79D9414D2F1 /* Release */,
+				0B2E34207D3322142B931E30 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
