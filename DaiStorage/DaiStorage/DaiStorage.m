@@ -77,7 +77,6 @@
 
 //共用同一個對象
 + (instancetype)shared {
-    NSAssert([NSThread isMainThread], @"ONLY Main Thread Work");
 	if (!objc_getAssociatedObject(self, _cmd)) {
 		objc_setAssociatedObject(self, _cmd, [[self class] new], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 	}

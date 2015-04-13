@@ -11,10 +11,8 @@
 @implementation DaiStorageTest
 
 - (void)testStoreContents {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [Misc shared].myFirstString = @"daidouji";
-        NSLog(@"%@", [Misc shared].storeContents);
-    });
+    [Misc shared].myFirstString = @"daidouji";
+    GHAssertTrue([Misc shared].storeContents.count == 1, @"數量應該只會有一個");
 }
 
 @end
