@@ -12,8 +12,7 @@
 
 + (DaiStoragePath *)document;
 + (DaiStoragePath *)resource;
-
-- (NSString *)path;
 - (DaiStoragePath *)fcd:(NSString *)directory;
+- (NSString *)path;
 
 @end

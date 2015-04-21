@@ -10,13 +10,10 @@
 #define DaiStorage_DaiStorageDefine_h
 
 #define avoidPerformSelectorWarning(CODE) \
-_Pragma("clang diagnostic push") \
-_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
-CODE \
-_Pragma("clang diagnostic pop")
-
-#define DaiStoragePropertyName @"DaiStoragePropertyName"
-#define DaiStoragePropertyType @"DaiStoragePropertyType"
+	_Pragma("clang diagnostic push") \
+	_Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+	CODE \
+	_Pragma("clang diagnostic pop")
 
 typedef id (^ReworkRuleBlock)(id self, id importValue);
 typedef id (^ImportRuleBlock)(NSString *importValue);

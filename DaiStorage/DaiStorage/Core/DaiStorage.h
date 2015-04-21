@@ -17,6 +17,7 @@
 
 + (instancetype)shared;
 
+- (void)importPath:(DaiStoragePath *)importPath;
 - (void)importPath:(DaiStoragePath *)importPath defaultPath:(DaiStoragePath *)defaultPath;
 - (BOOL)exportPath:(DaiStoragePath *)exportPath;
 
