@@ -19,5 +19,9 @@
 @property (nonatomic, readonly) Class aClass;
 @property (nonatomic, readonly) SEL setter;
 @property (nonatomic, readonly) SEL getter;
+@property (nonatomic, readonly) SEL importName;
+@property (nonatomic, readonly) SEL importType;
+@property (nonatomic, readonly) SEL exportName;
+@property (nonatomic, readonly) SEL exportType;
 
 @end

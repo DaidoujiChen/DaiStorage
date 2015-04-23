@@ -10,7 +10,7 @@
 
 @implementation DaiStorageProperty
 
-@dynamic aClass, setter, getter;
+@dynamic aClass, setter, getter, importName, importType, exportName, exportType;
 
 #pragma mark - readonly
 
@@ -25,6 +25,34 @@
 
 - (SEL)getter {
 	return NSSelectorFromString(self.name);
+}
+
+- (SEL)importName {
+    return [self importSelector:self.name];
+}
+
+- (SEL)importType {
+    return [self importSelector:self.type];
+}
+
+- (SEL)exportName {
+    return [self exportSelector:self.name];
+}
+
+- (SEL)exportType {
+    return [self exportSelector:self.type];
+}
+
+#pragma mark - private instance method
+
+- (SEL)importSelector:(NSString *)specialName {
+    NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleImport%@:", specialName];
+    return NSSelectorFromString(selectorString);
+}
+
+- (SEL)exportSelector:(NSString *)specialName {
+    NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleExport%@:", specialName];
+    return NSSelectorFromString(selectorString);
 }
 
 #pragma mark - class method

@@ -165,30 +165,33 @@
 - (void)reworkRuleNamed:(NSString *)ruleNamed whenImport:(ImportRuleBlock)importRule whenExport:(ExportRuleBlock)exportRule {
     const char *blockEncoding = [[NSString stringWithFormat: @"%s%s%s%s", @encode(id), @encode(id), @encode(SEL), @encode(id)] UTF8String];
     
+    //這邊用一個暫時的 property 取代下面要給 selector 名稱的部分
+    DaiStorageProperty *tmpProperty = [DaiStorageProperty propertyName:ruleNamed];
+    
     //add import rule method
     ReworkRuleBlock reworkImport = ^id(id self, id importValue) {
         return importRule(importValue);
     };
     IMP importIMP = imp_implementationWithBlock(reworkImport);
-    class_addMethod([self class], [self ruleImportSelector:ruleNamed], importIMP, blockEncoding);
+    class_addMethod([self class], tmpProperty.importName, importIMP, blockEncoding);
     
     //add export rule method
     ReworkRuleBlock reworkExport = ^id(id self, id exportValue) {
         return exportRule(exportValue);
     };
     IMP exportIMP = imp_implementationWithBlock(reworkExport);
-    class_addMethod([self class], [self ruleExportSelector:ruleNamed], exportIMP, blockEncoding);
+    class_addMethod([self class], tmpProperty.exportName, exportIMP, blockEncoding);
 }
 
 //轉換 import 的物件
 - (id)reworkByImportRule:(DaiStorageProperty *)property reworkItem:(id)reworkItem {
     id newItem = reworkItem;
     if (newItem) {
-        if ([self respondsToSelector:[self ruleImportSelector:property.type]]) {
-            avoidPerformSelectorWarning(newItem = [self performSelector:[self ruleImportSelector:property.type] withObject:newItem];)
+        if ([self respondsToSelector:property.importName]) {
+            avoidPerformSelectorWarning(newItem = [self performSelector:property.importName withObject:newItem];)
         }
-        else if ([self respondsToSelector:[self ruleImportSelector:property.name]]) {
-            avoidPerformSelectorWarning(newItem = [self performSelector:[self ruleImportSelector:property.name] withObject:newItem];)
+        else if ([self respondsToSelector:property.importType]) {
+            avoidPerformSelectorWarning(newItem = [self performSelector:property.importType withObject:newItem];)
         }
     }
     return newItem;
@@ -198,24 +201,14 @@
 - (id)reworkByExportRule:(DaiStorageProperty *)property reworkItem:(id)reworkItem {
     id newItem = reworkItem;
     if (newItem) {
-        if ([self respondsToSelector:[self ruleExportSelector:property.type]]) {
-            avoidPerformSelectorWarning(newItem = [self performSelector:[self ruleExportSelector:property.type] withObject:newItem];)
+        if ([self respondsToSelector:property.exportName]) {
+            avoidPerformSelectorWarning(newItem = [self performSelector:property.exportName withObject:newItem];)
         }
-        else if ([self respondsToSelector:[self ruleExportSelector:property.name]]) {
-            avoidPerformSelectorWarning(newItem = [self performSelector:[self ruleExportSelector:property.name] withObject:newItem];)
+        else if ([self respondsToSelector:property.exportType]) {
+            avoidPerformSelectorWarning(newItem = [self performSelector:property.exportType withObject:newItem];)
         }
     }
     return newItem;
-}
-
-- (SEL)ruleImportSelector:(NSString *)specialName {
-    NSString *ruleImportSelectorName = [NSString stringWithFormat:@"daiStorage_ruleImport%@:", specialName];
-    return NSSelectorFromString(ruleImportSelectorName);
-}
-
-- (SEL)ruleExportSelector:(NSString *)specialName {
-    NSString *ruleExportSelectorName = [NSString stringWithFormat:@"daiStorage_ruleExport%@:", specialName];
-    return NSSelectorFromString(ruleExportSelectorName);
 }
 
 #pragma mark * json data <-> dictionary
