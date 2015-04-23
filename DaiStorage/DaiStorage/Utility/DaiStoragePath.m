@@ -91,4 +91,14 @@
 	return nil;
 }
 
+#pragma mark - life cycle
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.subPaths = [NSMutableArray array];
+    }
+    return self;
+}
+
 @end
