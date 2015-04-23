@@ -10,9 +10,10 @@
 
 @interface DaiStoragePath : NSObject
 
+@property (nonatomic, readonly) NSString *path;
+
 + (DaiStoragePath *)document;
 + (DaiStoragePath *)resource;
 - (DaiStoragePath *)fcd:(NSString *)directory;
-- (NSString *)path;
 
 @end

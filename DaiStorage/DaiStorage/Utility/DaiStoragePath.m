@@ -17,6 +17,14 @@
 
 @implementation DaiStoragePath
 
+@dynamic path;
+
+#pragma mark - dynamic
+
+- (NSString *)path {
+    return [self.basePath stringByAppendingPathComponent:[self.subPaths componentsJoinedByString:@"/"]];
+}
+
 #pragma mark - class method
 
 + (DaiStoragePath *)document {
@@ -43,10 +51,6 @@
 }
 
 #pragma mark - instance method
-
-- (NSString *)path {
-	return [self.basePath stringByAppendingPathComponent:[self.subPaths componentsJoinedByString:@"/"]];
-}
 
 - (DaiStoragePath *)fcd:(NSString *)directory {
 	NSFileManager *fileManager = [NSFileManager defaultManager];
