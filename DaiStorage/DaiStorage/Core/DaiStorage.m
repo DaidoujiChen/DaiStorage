@@ -12,7 +12,36 @@
 #import "DaiStorageProperty.h"
 #import "DaiStorageTypeChecking.h"
 
+@interface DaiStorage ()
+
+@property (nonatomic, readonly) NSArray *listPropertys;
+
+@end
+
 @implementation DaiStorage
+
+@dynamic listPropertys;
+
+#pragma mark - dynamic
+
+//http://stackoverflow.com/questions/754824/get-an-object-properties-list-in-objective-c
+//列出當前 class 含有的 property 有哪些
+- (NSArray *)listPropertys {
+    NSMutableArray *propertyNames = [NSMutableArray array];
+    unsigned int outCount, i;
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    for (i = 0; i < outCount; i++) {
+        objc_property_t property = properties[i];
+        const char *propName = property_getName(property);
+        if (propName) {
+            NSString *propertyName = [NSString stringWithCString:propName encoding:[NSString defaultCStringEncoding]];
+            NSString *propertyType = [self readableTypeForEncoding:[self attributesDictionaryForProperty:property][@"T"]];
+            [propertyNames addObject:[DaiStorageProperty propertyName:propertyName type:propertyType]];
+        }
+    }
+    free(properties);
+    return propertyNames;
+}
 
 #pragma mark - readonly property
 
@@ -20,7 +49,7 @@
 - (NSDictionary *)storeContents {
 	NSMutableDictionary *returnValues = [NSMutableDictionary dictionary];
 	__weak id weakSelf = self;
-	[[self listPropertys] enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+	[self.listPropertys enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
         avoidPerformSelectorWarning(id currentProperty = [weakSelf performSelector:property.getter];)
         
         switch ([DaiStorageTypeChecking on:currentProperty]) {
@@ -106,11 +135,34 @@
     [self reworkRuleNamed:keyPath whenImport:importRule whenExport:exportRule];
 }
 
+- (void)removeAllObjects {
+    __weak id weakSelf = self;
+	[self.listPropertys enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+        switch ([DaiStorageTypeChecking on:property.aClass]) {
+            case DaiStorageTypeDaiStorage:
+            {
+                avoidPerformSelectorWarning(DaiStorage *daiStorage = [weakSelf performSelector:property.getter];)
+                [daiStorage removeAllObjects];
+                break;
+            }
+            case DaiStorageTypeDaiStorageArray:
+            {
+                avoidPerformSelectorWarning(DaiStorageArray *daiStorageArray = [weakSelf performSelector:property.getter];)
+                [daiStorageArray removeAllObjects];
+                break;
+            }
+            default:
+                avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:nil];)
+                break;
+        }
+	}];
+}
+
 #pragma mark - private instance method
 
 - (void)restoreContents:(NSDictionary *)importContents defaultContent:(NSDictionary *)defaultContent {
     __weak id weakSelf = self;
-    [[self listPropertys] enumerateObjectsUsingBlock:^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+    [self.listPropertys enumerateObjectsUsingBlock:^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
         id importItem = nil;
         if (importContents[property.name]) {
             importItem = importContents[property.name];
@@ -216,7 +268,14 @@
 // json data 存入指定路徑
 - (BOOL)jsonDataToPath:(DaiStoragePath *)path {
     NSString *filePath = [NSString stringWithFormat:@"%@/%@", [path path], NSStringFromClass([self class])];
-    return [[self jsonDataByContents:self.storeContents] writeToFile:filePath atomically:YES];
+    if (self.storeContents) {
+        return [[self jsonDataByContents:self.storeContents] writeToFile:filePath atomically:YES];
+    }
+    else {
+        NSError *error;
+        [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
+        return !error ? YES : NO ;
+    }
 }
 
 // contents 轉為 json data
@@ -243,25 +302,6 @@
 }
 
 #pragma mark * list propertys in class
-//http://stackoverflow.com/questions/754824/get-an-object-properties-list-in-objective-c
-
-//列出當前 class 含有的 property 有哪些
-- (NSArray *)listPropertys {
-	NSMutableArray *propertyNames = [NSMutableArray array];
-	unsigned int outCount, i;
-	objc_property_t *properties = class_copyPropertyList([self class], &outCount);
-	for (i = 0; i < outCount; i++) {
-		objc_property_t property = properties[i];
-		const char *propName = property_getName(property);
-		if (propName) {
-			NSString *propertyName = [NSString stringWithCString:propName encoding:[NSString defaultCStringEncoding]];
-			NSString *propertyType = [self readableTypeForEncoding:[self attributesDictionaryForProperty:property][@"T"]];
-			[propertyNames addObject:[DaiStorageProperty propertyName:propertyName type:propertyType]];
-		}
-	}
-	free(properties);
-	return propertyNames;
-}
 
 // from FLEX FLEXRuntimeUtility
 - (NSDictionary *)attributesDictionaryForProperty:(objc_property_t)property {
@@ -301,7 +341,7 @@
     self = [super init];
     if (self) {
         __weak id weakSelf = self;
-        [[self listPropertys] enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+        [self.listPropertys enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
             switch ([DaiStorageTypeChecking on:property.aClass]) {
                 case DaiStorageTypeDaiStorage:
                     avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.aClass new]];)

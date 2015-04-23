@@ -24,4 +24,6 @@
 - (void)reworkRuleForClass:(__unsafe_unretained Class)aClass whenImport:(ImportRuleBlock)importRule whenExport:(ExportRuleBlock)exportRule;
 - (void)reworkRuleForKeyPath:(NSString *)keyPath whenImport:(ImportRuleBlock)importRule whenExport:(ExportRuleBlock)exportRule;
 
+- (void)removeAllObjects;
+
 @end
