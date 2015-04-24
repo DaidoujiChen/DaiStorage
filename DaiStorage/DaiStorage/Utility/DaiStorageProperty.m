@@ -10,11 +10,11 @@
 
 @implementation DaiStorageProperty
 
-@dynamic aClass, setter, getter, importName, importType, exportName, exportType;
+@dynamic class, setter, getter, importName, importType, exportName, exportType;
 
 #pragma mark - readonly
 
-- (Class)aClass {
+- (Class)class {
 	return NSClassFromString(self.type);
 }
 

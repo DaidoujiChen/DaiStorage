@@ -14,19 +14,21 @@
 
 @interface DaiStorage ()
 
-@property (nonatomic, readonly) NSArray *listPropertys;
+@property (nonatomic, readonly) NSArray *listProperties;
+@property (nonatomic, strong) NSMutableDictionary *propertiesMapping;
+@property (nonatomic, copy) MigrationBlock migrations;
 
 @end
 
 @implementation DaiStorage
 
-@dynamic listPropertys;
+@dynamic listProperties;
 
 #pragma mark - dynamic
 
 //http://stackoverflow.com/questions/754824/get-an-object-properties-list-in-objective-c
 //列出當前 class 含有的 property 有哪些
-- (NSArray *)listPropertys {
+- (NSArray *)listProperties {
     NSMutableArray *propertyNames = [NSMutableArray array];
     unsigned int outCount, i;
     objc_property_t *properties = class_copyPropertyList([self class], &outCount);
@@ -48,14 +50,15 @@
 //回傳目前所含內容
 - (NSDictionary *)storeContents {
 	NSMutableDictionary *returnValues = [NSMutableDictionary dictionary];
-	__weak id weakSelf = self;
-	[self.listPropertys enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+	__weak typeof(self) weakSelf = self;
+    [[self.propertiesMapping allValues] enumerateObjectsUsingBlock:^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
         avoidPerformSelectorWarning(id currentProperty = [weakSelf performSelector:property.getter];)
-        
-        switch ([DaiStorageTypeChecking on:currentProperty]) {
+        switch ([DaiStorageTypeChecking on:property.class]) {
             case DaiStorageTypeDaiStorage:
+            {
                 avoidPerformSelectorWarning(currentProperty = [currentProperty performSelector:@selector(storeContents)];)
                 break;
+            }
             case DaiStorageTypeDaiStorageArray:
             {
                 DaiStorageArray *arrayProperty = currentProperty;
@@ -86,7 +89,7 @@
         if (currentProperty) {
             returnValues[property.name] = currentProperty;
         }
-	}];
+    }];
     
     if (returnValues.count) {
         return returnValues;
@@ -115,8 +118,13 @@
 
 //從 importpath 讀取資料, 不足的部分由 defaultpath 補齊
 - (void)importPath:(DaiStoragePath *)importPath defaultPath:(DaiStoragePath *)defaultPath {
-    NSDictionary *importContents = importPath ? [self jsonDataFromPath:importPath] : nil;
-    NSDictionary *defaultContents = defaultPath ? [self jsonDataFromPath:defaultPath] : nil;
+    [self importPath:importPath defaultPath:defaultPath migrations:nil];
+}
+
+- (void)importPath:(DaiStoragePath *)importPath defaultPath:(DaiStoragePath *)defaultPath migrations:(MigrationBlock)migrations {
+    self.migrations = migrations;
+    NSMutableDictionary *importContents = importPath ? [self jsonDataFromPath:importPath] : nil;
+    NSMutableDictionary *defaultContents = defaultPath ? [self jsonDataFromPath:defaultPath] : nil;
     [self restoreContents:importContents defaultContent:defaultContents];
 }
 
@@ -136,9 +144,9 @@
 }
 
 - (void)removeAllObjects {
-    __weak id weakSelf = self;
-	[self.listPropertys enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
-        switch ([DaiStorageTypeChecking on:property.aClass]) {
+    __weak typeof(self) weakSelf = self;
+    [[self.propertiesMapping allValues] enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+        switch ([DaiStorageTypeChecking on:property.class]) {
             case DaiStorageTypeDaiStorage:
             {
                 avoidPerformSelectorWarning(DaiStorage *daiStorage = [weakSelf performSelector:property.getter];)
@@ -155,60 +163,97 @@
                 avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:nil];)
                 break;
         }
-	}];
+    }];
 }
 
 #pragma mark - private instance method
 
-- (void)restoreContents:(NSDictionary *)importContents defaultContent:(NSDictionary *)defaultContent {
-    __weak id weakSelf = self;
-    [self.listPropertys enumerateObjectsUsingBlock:^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
-        id importItem = nil;
-        if (importContents[property.name]) {
-            importItem = importContents[property.name];
-        }
-        else if (defaultContent[property.name]) {
-            importItem = defaultContent[property.name];
-        }
-        
-        if (importItem) {
-            avoidPerformSelectorWarning(id currentProperty = [weakSelf performSelector:property.getter];)
-            
-            switch ([DaiStorageTypeChecking on:currentProperty]) {
-                case DaiStorageTypeDaiStorage:
-                    avoidPerformSelectorWarning([currentProperty performSelector:_cmd withObject:importItem withObject:nil];)
-                    break;
-                case DaiStorageTypeDaiStorageArray:
-                {
-                    DaiStorageArray *arrayProperty = currentProperty;
-                    [arrayProperty removeAllObjects];
-                    [importItem enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                        switch ([DaiStorageTypeChecking on:arrayProperty.aClass]) {
-                            case DaiStorageTypeDaiStorage:
-                            {
-                                id newStorage = [arrayProperty.aClass new];
-                                avoidPerformSelectorWarning([newStorage performSelector:_cmd withObject:obj withObject:nil];)
-                                [arrayProperty addObject:newStorage];
-                                break;
-                            }
-                                
-                            default:
-                                [arrayProperty addObject:[weakSelf reworkByImportRule:[DaiStorageProperty propertyType:arrayProperty.aClassName] reworkItem:obj]];
-                                break;
-                        }
-                    }];
-                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:arrayProperty];)
-                    break;
-                }
-                case DaiStorageTypeOthers:
-                {
-                    importItem = [weakSelf reworkByImportRule:property reworkItem:importItem];
-                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:importItem];)
-                    break;
-                }
-            }
+#pragma mark * restore
+
+- (void)restoreContents:(NSMutableDictionary *)importContents defaultContent:(NSMutableDictionary *)defaultContent {
+    
+    //這一段處理 daistorage 物件中, 與讀取回來 json 內容匹配的物件
+    __weak typeof(self) weakSelf = self;
+    [[self.propertiesMapping allValues] enumerateObjectsUsingBlock:^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+        id anObject = [weakSelf extractObjectNamed:property.name inImportContents:importContents andDefaultContent:defaultContent];
+        if (anObject) {
+            [weakSelf restoreByProperty:property usingObject:anObject];
         }
     }];
+    
+    //這一段處理 json 內容內, 剩餘的物件
+    if (self.migrations && (importContents.count || defaultContent.count)) {
+        NSMutableSet *mergeKeys = [NSMutableSet set];
+        [mergeKeys addObjectsFromArray:[importContents allKeys]];
+        [mergeKeys addObjectsFromArray:[defaultContent allKeys]];
+        
+        __weak typeof(self) weakSelf = self;
+        [mergeKeys enumerateObjectsUsingBlock:^(id obj, BOOL *stop) {
+            NSString *handleKeyPath = weakSelf.migrations(obj, importContents[obj], defaultContent[obj]);
+            DaiStorageProperty *property = weakSelf.propertiesMapping[handleKeyPath];
+            if (property) {
+                id anObject = [weakSelf extractObjectNamed:obj inImportContents:importContents andDefaultContent:defaultContent];
+                if (anObject) {
+                    [weakSelf restoreByProperty:property usingObject:anObject];
+                }
+            }
+        }];
+    }
+}
+
+//根據 property 處理塞進去的物件
+- (void)restoreByProperty:(DaiStorageProperty *)property usingObject:(id)anObject {
+    switch ([DaiStorageTypeChecking on:property.class]) {
+        case DaiStorageTypeDaiStorage:
+        {
+            avoidPerformSelectorWarning(id currentProperty = [self performSelector:property.getter];
+                                        [currentProperty performSelector:@selector(restoreContents:defaultContent:) withObject:anObject withObject:nil];)
+            break;
+        }
+        case DaiStorageTypeDaiStorageArray:
+        {
+            avoidPerformSelectorWarning(id currentProperty = [self performSelector:property.getter];)
+            DaiStorageArray *arrayProperty = currentProperty;
+            [arrayProperty removeAllObjects];
+            [anObject enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                switch ([DaiStorageTypeChecking on:arrayProperty.aClass]) {
+                    case DaiStorageTypeDaiStorage:
+                    {
+                        id newStorage = [arrayProperty.aClass new];
+                        avoidPerformSelectorWarning([newStorage performSelector:@selector(restoreContents:defaultContent:) withObject:obj withObject:nil];)
+                        [arrayProperty addObject:newStorage];
+                        break;
+                    }
+                        
+                    default:
+                        [arrayProperty addObject:[self reworkByImportRule:[DaiStorageProperty propertyType:arrayProperty.aClassName] reworkItem:obj]];
+                        break;
+                }
+            }];
+            avoidPerformSelectorWarning([self performSelector:property.setter withObject:arrayProperty];)
+            break;
+        }
+        case DaiStorageTypeOthers:
+        {
+            anObject = [self reworkByImportRule:property reworkItem:anObject];
+            avoidPerformSelectorWarning([self performSelector:property.setter withObject:anObject];)
+            break;
+        }
+    }
+}
+
+//從 import 及 default 內抽出相對應名稱的物件後, 將其清除掉
+- (id)extractObjectNamed:(NSString *)name inImportContents:(NSMutableDictionary *)importContents andDefaultContent:(NSMutableDictionary *)defaultContent {
+    id anObject = nil;
+    if (importContents[name]) {
+        anObject = importContents[name];
+    }
+    else if (defaultContent[name]) {
+        anObject = defaultContent[name];
+    }
+    [importContents removeObjectForKey:name];
+    [defaultContent removeObjectForKey:name];
+    return anObject;
 }
 
 #pragma mark * rule import / export selector name
@@ -287,21 +332,21 @@
 }
 
 //從指定路徑讀取 json data
-- (NSDictionary *)jsonDataFromPath:(DaiStoragePath *)path {
+- (NSMutableDictionary *)jsonDataFromPath:(DaiStoragePath *)path {
     NSString *filePath = [NSString stringWithFormat:@"%@/%@", [path path], NSStringFromClass([self class])];
     NSData *jsonData = [[NSFileManager defaultManager] contentsAtPath:filePath];
     return jsonData ? [self dictionaryByJsonData:jsonData] : nil;
 }
 
 // json data 轉換為 contents
-- (NSDictionary *)dictionaryByJsonData:(NSData *)jsonData {
+- (NSMutableDictionary *)dictionaryByJsonData:(NSData *)jsonData {
     NSError *error = nil;
-    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
+    NSMutableDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
     NSAssert(!error, error.description);
     return dictionary;
 }
 
-#pragma mark * list propertys in class
+#pragma mark * list properties in class
 
 // from FLEX FLEXRuntimeUtility
 - (NSDictionary *)attributesDictionaryForProperty:(objc_property_t)property {
@@ -340,14 +385,16 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        __weak id weakSelf = self;
-        [self.listPropertys enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
-            switch ([DaiStorageTypeChecking on:property.aClass]) {
+        self.propertiesMapping = [NSMutableDictionary dictionary];
+        __weak typeof(self) weakSelf = self;
+        [self.listProperties enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+            weakSelf.propertiesMapping[property.name] = property;
+            switch ([DaiStorageTypeChecking on:property.class]) {
                 case DaiStorageTypeDaiStorage:
-                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.aClass new]];)
+                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.class new]];)
                     break;
                 case DaiStorageTypeDaiStorageArray:
-                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.aClass new]];)
+                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.class new]];)
                     break;
                 default:
                     break;

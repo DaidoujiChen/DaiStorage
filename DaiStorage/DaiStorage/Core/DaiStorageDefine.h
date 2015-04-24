@@ -18,5 +18,6 @@
 typedef id (^ReworkRuleBlock)(id self, id importValue);
 typedef id (^ImportRuleBlock)(NSString *importValue);
 typedef NSString * (^ExportRuleBlock)(id exportValue);
+typedef NSString * (^MigrationBlock)(NSString *originKeyPath, NSString *importValue, NSString *defaultValue);
 
 #endif
