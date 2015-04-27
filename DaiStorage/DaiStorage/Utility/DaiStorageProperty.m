@@ -35,6 +35,10 @@
 @implementation DaiStorageProperty
 
 - (Class)class {
+    if (!self.type) {
+        return nil;
+    }
+    
     if (!_class) {
         _class = [self classFromCache:self.type];
     }
@@ -42,6 +46,10 @@
 }
 
 - (SEL)setter {
+    if (!self.name) {
+        return nil;
+    }
+    
     if (!_setter) {
         _setter = [self setterFromCache:self.name];
     }
@@ -49,6 +57,10 @@
 }
 
 - (SEL)getter {
+    if (!self.name) {
+        return nil;
+    }
+    
     if (!_getter) {
         _getter = [self getterFromCache:self.name];
     }
@@ -56,6 +68,10 @@
 }
 
 - (SEL)importName {
+    if (!self.name) {
+        return nil;
+    }
+    
     if (!_importName) {
         _importName = [self importSelectorFromCache:self.name];
     }
@@ -63,6 +79,10 @@
 }
 
 - (SEL)importType {
+    if (!self.type) {
+        return nil;
+    }
+    
     if (!_importType) {
         _importType = [self importSelectorFromCache:self.type];
     }
@@ -70,6 +90,10 @@
 }
 
 - (SEL)exportName {
+    if (!self.name) {
+        return nil;
+    }
+    
     if (!_exportName) {
         _exportName = [self exportSelectorFromCache:self.name];
     }
@@ -77,6 +101,10 @@
 }
 
 - (SEL)exportType {
+    if (!self.type) {
+        return nil;
+    }
+    
     if (!_exportType) {
         _exportType = [self exportSelectorFromCache:self.type];
     }
