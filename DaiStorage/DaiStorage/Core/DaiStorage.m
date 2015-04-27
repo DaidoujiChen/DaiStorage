@@ -9,41 +9,17 @@
 #import "DaiStorage.h"
 #import <objc/runtime.h>
 
-#import "DaiStorageProperty.h"
 #import "DaiStorageTypeChecking.h"
+#import "DaiStoragePropertiesInObject.h"
 
 @interface DaiStorage ()
 
-@property (nonatomic, readonly) NSArray *listProperties;
 @property (nonatomic, strong) NSMutableDictionary *propertiesMapping;
 @property (nonatomic, copy) MigrationBlock migrations;
 
 @end
 
 @implementation DaiStorage
-
-@dynamic listProperties;
-
-#pragma mark - dynamic
-
-//http://stackoverflow.com/questions/754824/get-an-object-properties-list-in-objective-c
-//列出當前 class 含有的 property 有哪些
-- (NSArray *)listProperties {
-    NSMutableArray *propertyNames = [NSMutableArray array];
-    unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
-    for (i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        const char *propName = property_getName(property);
-        if (propName) {
-            NSString *propertyName = [NSString stringWithCString:propName encoding:[NSString defaultCStringEncoding]];
-            NSString *propertyType = [self readableTypeForEncoding:[self attributesDictionaryForProperty:property][@"T"]];
-            [propertyNames addObject:[DaiStorageProperty propertyName:propertyName type:propertyType]];
-        }
-    }
-    free(properties);
-    return propertyNames;
-}
 
 #pragma mark - readonly property
 
@@ -346,40 +322,6 @@
     return dictionary;
 }
 
-#pragma mark * list properties in class
-
-// from FLEX FLEXRuntimeUtility
-- (NSDictionary *)attributesDictionaryForProperty:(objc_property_t)property {
-    NSString *attributes = @(property_getAttributes(property));
-    NSArray *attributePairs = [attributes componentsSeparatedByString:@","];
-    NSMutableDictionary *attributesDictionary = [NSMutableDictionary dictionaryWithCapacity:[attributePairs count]];
-    for (NSString *attributePair in attributePairs) {
-        [attributesDictionary setObject:[attributePair substringFromIndex:1] forKey:[attributePair substringToIndex:1]];
-    }
-    return attributesDictionary;
-}
-
-// from FLEX FLEXRuntimeUtility
-- (NSString *)readableTypeForEncoding:(NSString *)encodingString {
-    if (!encodingString) {
-        return nil;
-    }
-    
-    const char *encodingCString = [encodingString UTF8String];
-    if (encodingCString[0] == '@') {
-        NSString *class = [encodingString substringFromIndex:1];
-        class = [class stringByReplacingOccurrencesOfString:@"\"" withString:@""];
-        if ([class length] == 0 || [class isEqual:@"?"]) {
-            class = @"id";
-        } else {
-            class = [class stringByAppendingString:@""];
-        }
-        return class;
-    }
-    NSAssert(0, @"Only Support NSObject subclass");
-    return encodingString;
-}
-
 #pragma mark - life cycle
 
 - (instancetype)init {
@@ -387,7 +329,7 @@
     if (self) {
         self.propertiesMapping = [NSMutableDictionary dictionary];
         __weak typeof(self) weakSelf = self;
-        [self.listProperties enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
+        [[DaiStoragePropertiesInObject enumerate:self] enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
             weakSelf.propertiesMapping[property.name] = property;
             switch ([DaiStorageTypeChecking on:property.class]) {
                 case DaiStorageTypeDaiStorage:

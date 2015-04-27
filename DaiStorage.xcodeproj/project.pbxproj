@@ -24,6 +24,7 @@
 		1C5C9C001AE780DE001969C3 /* DaiStoragePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF41AE780A9001969C3 /* DaiStoragePath.m */; };
 		1C5C9C011AE780DE001969C3 /* DaiStorageProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */; };
 		1C5C9C021AE780DE001969C3 /* DaiStorageTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */; };
+		1C83A9161AEA58B7008800C7 /* DaiStoragePropertiesInObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */; };
 		1CCF8B611AE7820F00F8E229 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B601AE7820F00F8E229 /* Classroom.m */; };
 		1CCF8B641AE7828400F8E229 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B631AE7828400F8E229 /* Student.m */; };
 		1CCF8B671AE784B800F8E229 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B661AE784B800F8E229 /* Pet.m */; };
@@ -80,6 +81,8 @@
 		1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorageProperty.m; sourceTree = "<group>"; };
 		1C5C9BF71AE780A9001969C3 /* DaiStorageTypeChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorageTypeChecking.h; sourceTree = "<group>"; };
 		1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorageTypeChecking.m; sourceTree = "<group>"; };
+		1C83A9141AEA58B7008800C7 /* DaiStoragePropertiesInObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStoragePropertiesInObject.h; sourceTree = "<group>"; };
+		1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStoragePropertiesInObject.m; sourceTree = "<group>"; };
 		1CCF8B5F1AE7820F00F8E229 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
 		1CCF8B601AE7820F00F8E229 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
 		1CCF8B621AE7828400F8E229 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -225,6 +228,8 @@
 				1C5C9BF41AE780A9001969C3 /* DaiStoragePath.m */,
 				1C5C9BF51AE780A9001969C3 /* DaiStorageProperty.h */,
 				1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */,
+				1C83A9141AEA58B7008800C7 /* DaiStoragePropertiesInObject.h */,
+				1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */,
 				1C5C9BF71AE780A9001969C3 /* DaiStorageTypeChecking.h */,
 				1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */,
 			);
@@ -438,6 +443,7 @@
 				1C5C9BFD1AE780A9001969C3 /* DaiStorageTypeChecking.m in Sources */,
 				1C5C9BFC1AE780A9001969C3 /* DaiStorageProperty.m in Sources */,
 				1C0A71FA1AD52DFE00D357FA /* main.m in Sources */,
+				1C83A9161AEA58B7008800C7 /* DaiStoragePropertiesInObject.m in Sources */,
 				1C5C9BFB1AE780A9001969C3 /* DaiStoragePath.m in Sources */,
 				1CCF8B641AE7828400F8E229 /* Student.m in Sources */,
 				1C5C9BFA1AE780A9001969C3 /* DaiStorageArray.m in Sources */,
