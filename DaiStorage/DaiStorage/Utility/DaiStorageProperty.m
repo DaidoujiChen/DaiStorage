@@ -160,7 +160,7 @@
     }
     else {
         SelectorCache *selectorCache = [SelectorCache new];
-        NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleImport%@:", name];
+        NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleImport_%@:", name];
         selectorCache.cacheSelector = NSSelectorFromString(selectorString);
         [DaiStorageProperty importSelectorCache][name] = selectorCache;
         return selectorCache.cacheSelector;
@@ -174,7 +174,7 @@
     }
     else {
         SelectorCache *selectorCache = [SelectorCache new];
-        NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleExport%@:", name];
+        NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleExport_%@:", name];
         selectorCache.cacheSelector = NSSelectorFromString(selectorString);
         [DaiStorageProperty exportSelectorCache][name] = selectorCache;
         return selectorCache.cacheSelector;

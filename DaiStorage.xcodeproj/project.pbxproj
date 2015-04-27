@@ -1,703 +1,1707 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		018CCA181AEE7BFD00D92EA5 /* DaiStoragePropertiesInObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */; };
-		1C0A71FA1AD52DFE00D357FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71F91AD52DFE00D357FA /* main.m */; };
-		1C0A71FD1AD52DFE00D357FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */; };
-		1C0A72051AD52DFE00D357FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72041AD52DFE00D357FA /* Images.xcassets */; };
-		1C0A72141AD52DFE00D357FA /* DaiStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A72131AD52DFE00D357FA /* DaiStorageTests.m */; };
-		1C0A72201AD52E3900D357FA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A721E1AD52E3900D357FA /* MainViewController.m */; };
-		1C0A72211AD52E3900D357FA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A721F1AD52E3900D357FA /* MainViewController.xib */; };
-		1C0A72231AD52E8500D357FA /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72221AD52E8500D357FA /* Default-568h@2x.png */; };
-		1C5C9BF91AE780A9001969C3 /* DaiStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BEE1AE780A9001969C3 /* DaiStorage.m */; };
-		1C5C9BFA1AE780A9001969C3 /* DaiStorageArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF01AE780A9001969C3 /* DaiStorageArray.m */; };
-		1C5C9BFB1AE780A9001969C3 /* DaiStoragePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF41AE780A9001969C3 /* DaiStoragePath.m */; };
-		1C5C9BFC1AE780A9001969C3 /* DaiStorageProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */; };
-		1C5C9BFD1AE780A9001969C3 /* DaiStorageTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */; };
-		1C5C9BFE1AE780DE001969C3 /* DaiStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BEE1AE780A9001969C3 /* DaiStorage.m */; };
-		1C5C9BFF1AE780DE001969C3 /* DaiStorageArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF01AE780A9001969C3 /* DaiStorageArray.m */; };
-		1C5C9C001AE780DE001969C3 /* DaiStoragePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF41AE780A9001969C3 /* DaiStoragePath.m */; };
-		1C5C9C011AE780DE001969C3 /* DaiStorageProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */; };
-		1C5C9C021AE780DE001969C3 /* DaiStorageTypeChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */; };
-		1C83A9161AEA58B7008800C7 /* DaiStoragePropertiesInObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */; };
-		1CCF8B611AE7820F00F8E229 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B601AE7820F00F8E229 /* Classroom.m */; };
-		1CCF8B641AE7828400F8E229 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B631AE7828400F8E229 /* Student.m */; };
-		1CCF8B671AE784B800F8E229 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B661AE784B800F8E229 /* Pet.m */; };
-		1CCF8B681AE78A4F00F8E229 /* Classroom.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B601AE7820F00F8E229 /* Classroom.m */; };
-		1CCF8B691AE78A4F00F8E229 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B631AE7828400F8E229 /* Student.m */; };
-		1CCF8B6A1AE78A4F00F8E229 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCF8B661AE784B800F8E229 /* Pet.m */; };
-		628C3B9B9947003A718CD3BA /* DaiStorageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 580C672DC9F18547070920B9 /* DaiStorageTest.m */; };
-		7441069DC4664DD3157805FF /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD9D0D1BF4E897642CF2488 /* libPods-Tests.a */; };
-		BB263893632B88844540AB79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE4CF93DE6383EF1C59C3AC4 /* main.m */; };
-		CAE2C9D19571DE256073F25C /* DaiStorageTypeCheckingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C215AFB2D8C15982DCDC4CD /* DaiStorageTypeCheckingTest.m */; };
-		D8C54F76CA829C48F0F95C70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B40961755F5C77A781755D15 /* Foundation.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1C0A720E1AD52DFE00D357FA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1C0A71EC1AD52DFE00D357FA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C0A71F31AD52DFE00D357FA;
-			remoteInfo = DaiStorage;
-		};
-		37F0E4E2C35D6388BFD3285B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1C0A71EC1AD52DFE00D357FA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1C0A71F31AD52DFE00D357FA;
-			remoteInfo = DaiStorage;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		001886EA815B1B87686399DC /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1C0A71F41AD52DFE00D357FA /* DaiStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaiStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C0A71F81AD52DFE00D357FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C0A71F91AD52DFE00D357FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1C0A71FB1AD52DFE00D357FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1C0A72041AD52DFE00D357FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1C0A720D1AD52DFE00D357FA /* DaiStorageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaiStorageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C0A72121AD52DFE00D357FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1C0A72131AD52DFE00D357FA /* DaiStorageTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaiStorageTests.m; sourceTree = "<group>"; };
-		1C0A721D1AD52E3900D357FA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		1C0A721E1AD52E3900D357FA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
-		1C0A721F1AD52E3900D357FA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		1C0A72221AD52E8500D357FA /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		1C5C9BED1AE780A9001969C3 /* DaiStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorage.h; sourceTree = "<group>"; };
-		1C5C9BEE1AE780A9001969C3 /* DaiStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorage.m; sourceTree = "<group>"; };
-		1C5C9BEF1AE780A9001969C3 /* DaiStorageArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorageArray.h; sourceTree = "<group>"; };
-		1C5C9BF01AE780A9001969C3 /* DaiStorageArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorageArray.m; sourceTree = "<group>"; };
-		1C5C9BF11AE780A9001969C3 /* DaiStorageDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorageDefine.h; sourceTree = "<group>"; };
-		1C5C9BF31AE780A9001969C3 /* DaiStoragePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStoragePath.h; sourceTree = "<group>"; };
-		1C5C9BF41AE780A9001969C3 /* DaiStoragePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStoragePath.m; sourceTree = "<group>"; };
-		1C5C9BF51AE780A9001969C3 /* DaiStorageProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorageProperty.h; sourceTree = "<group>"; };
-		1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorageProperty.m; sourceTree = "<group>"; };
-		1C5C9BF71AE780A9001969C3 /* DaiStorageTypeChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStorageTypeChecking.h; sourceTree = "<group>"; };
-		1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStorageTypeChecking.m; sourceTree = "<group>"; };
-		1C83A9141AEA58B7008800C7 /* DaiStoragePropertiesInObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaiStoragePropertiesInObject.h; sourceTree = "<group>"; };
-		1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaiStoragePropertiesInObject.m; sourceTree = "<group>"; };
-		1CCF8B5F1AE7820F00F8E229 /* Classroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Classroom.h; sourceTree = "<group>"; };
-		1CCF8B601AE7820F00F8E229 /* Classroom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Classroom.m; sourceTree = "<group>"; };
-		1CCF8B621AE7828400F8E229 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		1CCF8B631AE7828400F8E229 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
-		1CCF8B651AE784B800F8E229 /* Pet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
-		1CCF8B661AE784B800F8E229 /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
-		4C215AFB2D8C15982DCDC4CD /* DaiStorageTypeCheckingTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DaiStorageTypeCheckingTest.m; path = Tests/DaiStorageTypeCheckingTest.m; sourceTree = "<group>"; };
-		580C672DC9F18547070920B9 /* DaiStorageTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DaiStorageTest.m; path = Tests/DaiStorageTest.m; sourceTree = "<group>"; };
-		5ABBDB1D7BB0D7B84A894649 /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8BD9D0D1BF4E897642CF2488 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B40961755F5C77A781755D15 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BC1A7D1BE8FCB4F510F0BC60 /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE4CF93DE6383EF1C59C3AC4 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Tests/main.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		1C0A71F11AD52DFE00D357FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C0A720A1AD52DFE00D357FA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5EC074120E316E058A64228 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D8C54F76CA829C48F0F95C70 /* Foundation.framework in Frameworks */,
-				7441069DC4664DD3157805FF /* libPods-Tests.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		11121FFBBE0D9B9217901079 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				EE4CF93DE6383EF1C59C3AC4 /* main.m */,
-				580C672DC9F18547070920B9 /* DaiStorageTest.m */,
-				4C215AFB2D8C15982DCDC4CD /* DaiStorageTypeCheckingTest.m */,
-			);
-			name = Tests;
-			sourceTree = "<group>";
-		};
-		1C0A71EB1AD52DFE00D357FA = {
-			isa = PBXGroup;
-			children = (
-				1C0A71F61AD52DFE00D357FA /* DaiStorage */,
-				1C0A72101AD52DFE00D357FA /* DaiStorageTests */,
-				1C0A71F51AD52DFE00D357FA /* Products */,
-				795263AA10AB6A93DE22B668 /* Frameworks */,
-				11121FFBBE0D9B9217901079 /* Tests */,
-				E6664358EC204A35A30DB687 /* Pods */,
-			);
-			sourceTree = "<group>";
-		};
-		1C0A71F51AD52DFE00D357FA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1C0A71F41AD52DFE00D357FA /* DaiStorage.app */,
-				1C0A720D1AD52DFE00D357FA /* DaiStorageTests.xctest */,
-				5ABBDB1D7BB0D7B84A894649 /* Tests.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1C0A71F61AD52DFE00D357FA /* DaiStorage */ = {
-			isa = PBXGroup;
-			children = (
-				1C0A72241AD52EFD00D357FA /* DaiStorage */,
-				1CCF8B5E1AE781C300F8E229 /* TestingModel */,
-				1C0A71FB1AD52DFE00D357FA /* AppDelegate.h */,
-				1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */,
-				1C0A721D1AD52E3900D357FA /* MainViewController.h */,
-				1C0A721E1AD52E3900D357FA /* MainViewController.m */,
-				1C0A721F1AD52E3900D357FA /* MainViewController.xib */,
-				1C0A72041AD52DFE00D357FA /* Images.xcassets */,
-				1C0A71F71AD52DFE00D357FA /* Supporting Files */,
-			);
-			path = DaiStorage;
-			sourceTree = "<group>";
-		};
-		1C0A71F71AD52DFE00D357FA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1C0A72221AD52E8500D357FA /* Default-568h@2x.png */,
-				1C0A71F81AD52DFE00D357FA /* Info.plist */,
-				1C0A71F91AD52DFE00D357FA /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1C0A72101AD52DFE00D357FA /* DaiStorageTests */ = {
-			isa = PBXGroup;
-			children = (
-				1C0A72131AD52DFE00D357FA /* DaiStorageTests.m */,
-				1C0A72111AD52DFE00D357FA /* Supporting Files */,
-			);
-			path = DaiStorageTests;
-			sourceTree = "<group>";
-		};
-		1C0A72111AD52DFE00D357FA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				1C0A72121AD52DFE00D357FA /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1C0A72241AD52EFD00D357FA /* DaiStorage */ = {
-			isa = PBXGroup;
-			children = (
-				1C5C9BEC1AE780A9001969C3 /* Core */,
-				1C5C9BF21AE780A9001969C3 /* Utility */,
-			);
-			path = DaiStorage;
-			sourceTree = "<group>";
-		};
-		1C5C9BEC1AE780A9001969C3 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				1C5C9BF11AE780A9001969C3 /* DaiStorageDefine.h */,
-				1C5C9BED1AE780A9001969C3 /* DaiStorage.h */,
-				1C5C9BEE1AE780A9001969C3 /* DaiStorage.m */,
-				1C5C9BEF1AE780A9001969C3 /* DaiStorageArray.h */,
-				1C5C9BF01AE780A9001969C3 /* DaiStorageArray.m */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		1C5C9BF21AE780A9001969C3 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				1C5C9BF31AE780A9001969C3 /* DaiStoragePath.h */,
-				1C5C9BF41AE780A9001969C3 /* DaiStoragePath.m */,
-				1C5C9BF51AE780A9001969C3 /* DaiStorageProperty.h */,
-				1C5C9BF61AE780A9001969C3 /* DaiStorageProperty.m */,
-				1C83A9141AEA58B7008800C7 /* DaiStoragePropertiesInObject.h */,
-				1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */,
-				1C5C9BF71AE780A9001969C3 /* DaiStorageTypeChecking.h */,
-				1C5C9BF81AE780A9001969C3 /* DaiStorageTypeChecking.m */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		1CCF8B5E1AE781C300F8E229 /* TestingModel */ = {
-			isa = PBXGroup;
-			children = (
-				1CCF8B5F1AE7820F00F8E229 /* Classroom.h */,
-				1CCF8B601AE7820F00F8E229 /* Classroom.m */,
-				1CCF8B621AE7828400F8E229 /* Student.h */,
-				1CCF8B631AE7828400F8E229 /* Student.m */,
-				1CCF8B651AE784B800F8E229 /* Pet.h */,
-				1CCF8B661AE784B800F8E229 /* Pet.m */,
-			);
-			path = TestingModel;
-			sourceTree = "<group>";
-		};
-		21C73C6B8202F415EAD29118 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B40961755F5C77A781755D15 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		795263AA10AB6A93DE22B668 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				21C73C6B8202F415EAD29118 /* iOS */,
-				8BD9D0D1BF4E897642CF2488 /* libPods-Tests.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E6664358EC204A35A30DB687 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				001886EA815B1B87686399DC /* Pods-Tests.release.xcconfig */,
-				BC1A7D1BE8FCB4F510F0BC60 /* Pods-Tests.debug.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		1C0A71F31AD52DFE00D357FA /* DaiStorage */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C0A72171AD52DFE00D357FA /* Build configuration list for PBXNativeTarget "DaiStorage" */;
-			buildPhases = (
-				1C0A71F01AD52DFE00D357FA /* Sources */,
-				1C0A71F11AD52DFE00D357FA /* Frameworks */,
-				1C0A71F21AD52DFE00D357FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DaiStorage;
-			productName = DaiStorage;
-			productReference = 1C0A71F41AD52DFE00D357FA /* DaiStorage.app */;
-			productType = "com.apple.product-type.application";
-		};
-		1C0A720C1AD52DFE00D357FA /* DaiStorageTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C0A721A1AD52DFE00D357FA /* Build configuration list for PBXNativeTarget "DaiStorageTests" */;
-			buildPhases = (
-				1C0A72091AD52DFE00D357FA /* Sources */,
-				1C0A720A1AD52DFE00D357FA /* Frameworks */,
-				1C0A720B1AD52DFE00D357FA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1C0A720F1AD52DFE00D357FA /* PBXTargetDependency */,
-			);
-			name = DaiStorageTests;
-			productName = DaiStorageTests;
-			productReference = 1C0A720D1AD52DFE00D357FA /* DaiStorageTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		5B7DB57BFCB01B0195865561 /* Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D6930AEEC9606B05F4118A9F /* Build configuration list for PBXNativeTarget "Tests" */;
-			buildPhases = (
-				5B0C0F65F84D6260E39DDD31 /* Check Pods Manifest.lock */,
-				60CC60C4081150127CB2E09A /* Sources */,
-				F5EC074120E316E058A64228 /* Frameworks */,
-				D92ADCEC5198D9B5FB575B6C /* Resources */,
-				1AAFABB19957C5A4F2CFC73B /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB7113FFE621A8C3749483EA /* PBXTargetDependency */,
-			);
-			name = Tests;
-			productName = Tests;
-			productReference = 5ABBDB1D7BB0D7B84A894649 /* Tests.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		1C0A71EC1AD52DFE00D357FA /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0620;
-				ORGANIZATIONNAME = DaidoujiChen;
-				TargetAttributes = {
-					1C0A71F31AD52DFE00D357FA = {
-						CreatedOnToolsVersion = 6.2;
-					};
-					1C0A720C1AD52DFE00D357FA = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 1C0A71F31AD52DFE00D357FA;
-					};
-				};
-			};
-			buildConfigurationList = 1C0A71EF1AD52DFE00D357FA /* Build configuration list for PBXProject "DaiStorage" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 1C0A71EB1AD52DFE00D357FA;
-			productRefGroup = 1C0A71F51AD52DFE00D357FA /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				1C0A71F31AD52DFE00D357FA /* DaiStorage */,
-				1C0A720C1AD52DFE00D357FA /* DaiStorageTests */,
-				5B7DB57BFCB01B0195865561 /* Tests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		1C0A71F21AD52DFE00D357FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C0A72051AD52DFE00D357FA /* Images.xcassets in Resources */,
-				1C0A72211AD52E3900D357FA /* MainViewController.xib in Resources */,
-				1C0A72231AD52E8500D357FA /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C0A720B1AD52DFE00D357FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D92ADCEC5198D9B5FB575B6C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1AAFABB19957C5A4F2CFC73B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5B0C0F65F84D6260E39DDD31 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		1C0A71F01AD52DFE00D357FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1CCF8B671AE784B800F8E229 /* Pet.m in Sources */,
-				1CCF8B611AE7820F00F8E229 /* Classroom.m in Sources */,
-				1C0A71FD1AD52DFE00D357FA /* AppDelegate.m in Sources */,
-				1C0A72201AD52E3900D357FA /* MainViewController.m in Sources */,
-				1C5C9BFD1AE780A9001969C3 /* DaiStorageTypeChecking.m in Sources */,
-				1C5C9BFC1AE780A9001969C3 /* DaiStorageProperty.m in Sources */,
-				1C0A71FA1AD52DFE00D357FA /* main.m in Sources */,
-				1C83A9161AEA58B7008800C7 /* DaiStoragePropertiesInObject.m in Sources */,
-				1C5C9BFB1AE780A9001969C3 /* DaiStoragePath.m in Sources */,
-				1CCF8B641AE7828400F8E229 /* Student.m in Sources */,
-				1C5C9BFA1AE780A9001969C3 /* DaiStorageArray.m in Sources */,
-				1C5C9BF91AE780A9001969C3 /* DaiStorage.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1C0A72091AD52DFE00D357FA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C0A72141AD52DFE00D357FA /* DaiStorageTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60CC60C4081150127CB2E09A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				018CCA181AEE7BFD00D92EA5 /* DaiStoragePropertiesInObject.m in Sources */,
-				1CCF8B681AE78A4F00F8E229 /* Classroom.m in Sources */,
-				1CCF8B691AE78A4F00F8E229 /* Student.m in Sources */,
-				1CCF8B6A1AE78A4F00F8E229 /* Pet.m in Sources */,
-				1C5C9BFE1AE780DE001969C3 /* DaiStorage.m in Sources */,
-				1C5C9BFF1AE780DE001969C3 /* DaiStorageArray.m in Sources */,
-				1C5C9C001AE780DE001969C3 /* DaiStoragePath.m in Sources */,
-				1C5C9C011AE780DE001969C3 /* DaiStorageProperty.m in Sources */,
-				1C5C9C021AE780DE001969C3 /* DaiStorageTypeChecking.m in Sources */,
-				BB263893632B88844540AB79 /* main.m in Sources */,
-				628C3B9B9947003A718CD3BA /* DaiStorageTest.m in Sources */,
-				CAE2C9D19571DE256073F25C /* DaiStorageTypeCheckingTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1C0A720F1AD52DFE00D357FA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1C0A71F31AD52DFE00D357FA /* DaiStorage */;
-			targetProxy = 1C0A720E1AD52DFE00D357FA /* PBXContainerItemProxy */;
-		};
-		CB7113FFE621A8C3749483EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DaiStorage;
-			target = 1C0A71F31AD52DFE00D357FA /* DaiStorage */;
-			targetProxy = 37F0E4E2C35D6388BFD3285B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		0B2E34207D3322142B931E30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC1A7D1BE8FCB4F510F0BC60 /* Pods-Tests.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		1C0A72151AD52DFE00D357FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		1C0A72161AD52DFE00D357FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		1C0A72181AD52DFE00D357FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DaiStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1C0A72191AD52DFE00D357FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = DaiStorage/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		1C0A721B1AD52DFE00D357FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DaiStorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DaiStorage.app/DaiStorage";
-			};
-			name = Debug;
-		};
-		1C0A721C1AD52DFE00D357FA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = DaiStorageTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DaiStorage.app/DaiStorage";
-			};
-			name = Release;
-		};
-		84D118FC5DB1C79D9414D2F1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 001886EA815B1B87686399DC /* Pods-Tests.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Tests/Tests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		1C0A71EF1AD52DFE00D357FA /* Build configuration list for PBXProject "DaiStorage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C0A72151AD52DFE00D357FA /* Debug */,
-				1C0A72161AD52DFE00D357FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C0A72171AD52DFE00D357FA /* Build configuration list for PBXNativeTarget "DaiStorage" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C0A72181AD52DFE00D357FA /* Debug */,
-				1C0A72191AD52DFE00D357FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1C0A721A1AD52DFE00D357FA /* Build configuration list for PBXNativeTarget "DaiStorageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1C0A721B1AD52DFE00D357FA /* Debug */,
-				1C0A721C1AD52DFE00D357FA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D6930AEEC9606B05F4118A9F /* Build configuration list for PBXNativeTarget "Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				84D118FC5DB1C79D9414D2F1 /* Release */,
-				0B2E34207D3322142B931E30 /* Debug */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 1C0A71EC1AD52DFE00D357FA /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>001886EA815B1B87686399DC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Tests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>018CCA181AEE7BFD00D92EA5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C83A9151AEA58B7008800C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0B2E34207D3322142B931E30</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>BC1A7D1BE8FCB4F510F0BC60</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Tests/Tests-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>11121FFBBE0D9B9217901079</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EE4CF93DE6383EF1C59C3AC4</string>
+				<string>580C672DC9F18547070920B9</string>
+				<string>4C215AFB2D8C15982DCDC4CD</string>
+				<string>D87EAFA2ED03C831A481CE22</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1AAFABB19957C5A4F2CFC73B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A71EB1AD52DFE00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C0A71F61AD52DFE00D357FA</string>
+				<string>1C0A72101AD52DFE00D357FA</string>
+				<string>1C0A71F51AD52DFE00D357FA</string>
+				<string>795263AA10AB6A93DE22B668</string>
+				<string>11121FFBBE0D9B9217901079</string>
+				<string>E6664358EC204A35A30DB687</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71EC1AD52DFE00D357FA</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0620</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>DaidoujiChen</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>1C0A71F31AD52DFE00D357FA</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.2</string>
+					</dict>
+					<key>1C0A720C1AD52DFE00D357FA</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>6.2</string>
+						<key>TestTargetID</key>
+						<string>1C0A71F31AD52DFE00D357FA</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>1C0A71EF1AD52DFE00D357FA</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>1C0A71EB1AD52DFE00D357FA</string>
+			<key>productRefGroup</key>
+			<string>1C0A71F51AD52DFE00D357FA</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>1C0A71F31AD52DFE00D357FA</string>
+				<string>1C0A720C1AD52DFE00D357FA</string>
+				<string>5B7DB57BFCB01B0195865561</string>
+			</array>
+		</dict>
+		<key>1C0A71EF1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1C0A72151AD52DFE00D357FA</string>
+				<string>1C0A72161AD52DFE00D357FA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1C0A71F01AD52DFE00D357FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1CCF8B671AE784B800F8E229</string>
+				<string>1CCF8B611AE7820F00F8E229</string>
+				<string>1C0A71FD1AD52DFE00D357FA</string>
+				<string>1C0A72201AD52E3900D357FA</string>
+				<string>1C5C9BFD1AE780A9001969C3</string>
+				<string>1C5C9BFC1AE780A9001969C3</string>
+				<string>1C0A71FA1AD52DFE00D357FA</string>
+				<string>1C83A9161AEA58B7008800C7</string>
+				<string>1C5C9BFB1AE780A9001969C3</string>
+				<string>1CCF8B641AE7828400F8E229</string>
+				<string>1C5C9BFA1AE780A9001969C3</string>
+				<string>1C5C9BF91AE780A9001969C3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A71F11AD52DFE00D357FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A71F21AD52DFE00D357FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1C0A72051AD52DFE00D357FA</string>
+				<string>1C0A72211AD52E3900D357FA</string>
+				<string>1C0A72231AD52E8500D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A71F31AD52DFE00D357FA</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>1C0A72171AD52DFE00D357FA</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1C0A71F01AD52DFE00D357FA</string>
+				<string>1C0A71F11AD52DFE00D357FA</string>
+				<string>1C0A71F21AD52DFE00D357FA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DaiStorage</string>
+			<key>productName</key>
+			<string>DaiStorage</string>
+			<key>productReference</key>
+			<string>1C0A71F41AD52DFE00D357FA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>1C0A71F41AD52DFE00D357FA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DaiStorage.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1C0A71F51AD52DFE00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C0A71F41AD52DFE00D357FA</string>
+				<string>1C0A720D1AD52DFE00D357FA</string>
+				<string>5ABBDB1D7BB0D7B84A894649</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71F61AD52DFE00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C0A72241AD52EFD00D357FA</string>
+				<string>1CCF8B5E1AE781C300F8E229</string>
+				<string>1C0A71FB1AD52DFE00D357FA</string>
+				<string>1C0A71FC1AD52DFE00D357FA</string>
+				<string>1C0A721D1AD52E3900D357FA</string>
+				<string>1C0A721E1AD52E3900D357FA</string>
+				<string>1C0A721F1AD52E3900D357FA</string>
+				<string>1C0A72041AD52DFE00D357FA</string>
+				<string>1C0A71F71AD52DFE00D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DaiStorage</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71F71AD52DFE00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C0A72221AD52E8500D357FA</string>
+				<string>1C0A71F81AD52DFE00D357FA</string>
+				<string>1C0A71F91AD52DFE00D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71F81AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71F91AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71FA1AD52DFE00D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A71F91AD52DFE00D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A71FB1AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71FC1AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A71FD1AD52DFE00D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A71FC1AD52DFE00D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A72041AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72051AD52DFE00D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A72041AD52DFE00D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A72091AD52DFE00D357FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1C0A72141AD52DFE00D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A720A1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A720B1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1C0A720C1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>1C0A721A1AD52DFE00D357FA</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1C0A72091AD52DFE00D357FA</string>
+				<string>1C0A720A1AD52DFE00D357FA</string>
+				<string>1C0A720B1AD52DFE00D357FA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>1C0A720F1AD52DFE00D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>DaiStorageTests</string>
+			<key>productName</key>
+			<string>DaiStorageTests</string>
+			<key>productReference</key>
+			<string>1C0A720D1AD52DFE00D357FA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>1C0A720D1AD52DFE00D357FA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>DaiStorageTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1C0A720E1AD52DFE00D357FA</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>1C0A71EC1AD52DFE00D357FA</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1C0A71F31AD52DFE00D357FA</string>
+			<key>remoteInfo</key>
+			<string>DaiStorage</string>
+		</dict>
+		<key>1C0A720F1AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>1C0A71F31AD52DFE00D357FA</string>
+			<key>targetProxy</key>
+			<string>1C0A720E1AD52DFE00D357FA</string>
+		</dict>
+		<key>1C0A72101AD52DFE00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C0A72131AD52DFE00D357FA</string>
+				<string>1C0A72111AD52DFE00D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DaiStorageTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72111AD52DFE00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C0A72121AD52DFE00D357FA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72121AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72131AD52DFE00D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStorageTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72141AD52DFE00D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A72131AD52DFE00D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A72151AD52DFE00D357FA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1C0A72161AD52DFE00D357FA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.2</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1C0A72171AD52DFE00D357FA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1C0A72181AD52DFE00D357FA</string>
+				<string>1C0A72191AD52DFE00D357FA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1C0A72181AD52DFE00D357FA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DaiStorage/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1C0A72191AD52DFE00D357FA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>DaiStorage/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1C0A721A1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>1C0A721B1AD52DFE00D357FA</string>
+				<string>1C0A721C1AD52DFE00D357FA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>1C0A721B1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>DaiStorageTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/DaiStorage.app/DaiStorage</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>1C0A721C1AD52DFE00D357FA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>DaiStorageTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/DaiStorage.app/DaiStorage</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1C0A721D1AD52E3900D357FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A721E1AD52E3900D357FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A721F1AD52E3900D357FA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>MainViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72201AD52E3900D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A721E1AD52E3900D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A72211AD52E3900D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A721F1AD52E3900D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A72221AD52E8500D357FA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>image.png</string>
+			<key>path</key>
+			<string>Default-568h@2x.png</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0A72231AD52E8500D357FA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C0A72221AD52E8500D357FA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C0A72241AD52EFD00D357FA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C5C9BEC1AE780A9001969C3</string>
+				<string>1C5C9BF21AE780A9001969C3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>DaiStorage</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BEC1AE780A9001969C3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C5C9BF11AE780A9001969C3</string>
+				<string>1C5C9BED1AE780A9001969C3</string>
+				<string>1C5C9BEE1AE780A9001969C3</string>
+				<string>1C5C9BEF1AE780A9001969C3</string>
+				<string>1C5C9BF01AE780A9001969C3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BED1AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStorage.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BEE1AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStorage.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BEF1AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStorageArray.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF01AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStorageArray.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF11AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStorageDefine.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF21AE780A9001969C3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1C5C9BF31AE780A9001969C3</string>
+				<string>1C5C9BF41AE780A9001969C3</string>
+				<string>1C5C9BF51AE780A9001969C3</string>
+				<string>1C5C9BF61AE780A9001969C3</string>
+				<string>1C83A9141AEA58B7008800C7</string>
+				<string>1C83A9151AEA58B7008800C7</string>
+				<string>1C5C9BF71AE780A9001969C3</string>
+				<string>1C5C9BF81AE780A9001969C3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Utility</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF31AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStoragePath.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF41AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStoragePath.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF51AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStorageProperty.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF61AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStorageProperty.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF71AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStorageTypeChecking.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF81AE780A9001969C3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStorageTypeChecking.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5C9BF91AE780A9001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BEE1AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9BFA1AE780A9001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF01AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9BFB1AE780A9001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF41AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9BFC1AE780A9001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF61AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9BFD1AE780A9001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF81AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9BFE1AE780DE001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BEE1AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9BFF1AE780DE001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF01AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9C001AE780DE001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF41AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9C011AE780DE001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF61AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C5C9C021AE780DE001969C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5C9BF81AE780A9001969C3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1C83A9141AEA58B7008800C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>DaiStoragePropertiesInObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C83A9151AEA58B7008800C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DaiStoragePropertiesInObject.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C83A9161AEA58B7008800C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C83A9151AEA58B7008800C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1CCF8B5E1AE781C300F8E229</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1CCF8B5F1AE7820F00F8E229</string>
+				<string>1CCF8B601AE7820F00F8E229</string>
+				<string>1CCF8B621AE7828400F8E229</string>
+				<string>1CCF8B631AE7828400F8E229</string>
+				<string>1CCF8B651AE784B800F8E229</string>
+				<string>1CCF8B661AE784B800F8E229</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TestingModel</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B5F1AE7820F00F8E229</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Classroom.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B601AE7820F00F8E229</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Classroom.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B611AE7820F00F8E229</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CCF8B601AE7820F00F8E229</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1CCF8B621AE7828400F8E229</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Student.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B631AE7828400F8E229</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Student.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B641AE7828400F8E229</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CCF8B631AE7828400F8E229</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1CCF8B651AE784B800F8E229</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pet.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B661AE784B800F8E229</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pet.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CCF8B671AE784B800F8E229</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CCF8B661AE784B800F8E229</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1CCF8B681AE78A4F00F8E229</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CCF8B601AE7820F00F8E229</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1CCF8B691AE78A4F00F8E229</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CCF8B631AE7828400F8E229</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1CCF8B6A1AE78A4F00F8E229</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1CCF8B661AE784B800F8E229</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1D4726A633B697DB65C07656</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D87EAFA2ED03C831A481CE22</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>21C73C6B8202F415EAD29118</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B40961755F5C77A781755D15</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>37F0E4E2C35D6388BFD3285B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>1C0A71EC1AD52DFE00D357FA</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>1C0A71F31AD52DFE00D357FA</string>
+			<key>remoteInfo</key>
+			<string>DaiStorage</string>
+		</dict>
+		<key>4C215AFB2D8C15982DCDC4CD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DaiStorageTypeCheckingTest.m</string>
+			<key>path</key>
+			<string>Tests/DaiStorageTypeCheckingTest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>580C672DC9F18547070920B9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DaiStorageTest.m</string>
+			<key>path</key>
+			<string>Tests/DaiStorageTest.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5ABBDB1D7BB0D7B84A894649</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Tests.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>5B0C0F65F84D6260E39DDD31</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>5B7DB57BFCB01B0195865561</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D6930AEEC9606B05F4118A9F</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5B0C0F65F84D6260E39DDD31</string>
+				<string>60CC60C4081150127CB2E09A</string>
+				<string>F5EC074120E316E058A64228</string>
+				<string>D92ADCEC5198D9B5FB575B6C</string>
+				<string>1AAFABB19957C5A4F2CFC73B</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>CB7113FFE621A8C3749483EA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Tests</string>
+			<key>productName</key>
+			<string>Tests</string>
+			<key>productReference</key>
+			<string>5ABBDB1D7BB0D7B84A894649</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>60CC60C4081150127CB2E09A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>018CCA181AEE7BFD00D92EA5</string>
+				<string>1CCF8B681AE78A4F00F8E229</string>
+				<string>1CCF8B691AE78A4F00F8E229</string>
+				<string>1CCF8B6A1AE78A4F00F8E229</string>
+				<string>1C5C9BFE1AE780DE001969C3</string>
+				<string>1C5C9BFF1AE780DE001969C3</string>
+				<string>1C5C9C001AE780DE001969C3</string>
+				<string>1C5C9C011AE780DE001969C3</string>
+				<string>1C5C9C021AE780DE001969C3</string>
+				<string>BB263893632B88844540AB79</string>
+				<string>628C3B9B9947003A718CD3BA</string>
+				<string>CAE2C9D19571DE256073F25C</string>
+				<string>1D4726A633B697DB65C07656</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>628C3B9B9947003A718CD3BA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>580C672DC9F18547070920B9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7441069DC4664DD3157805FF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8BD9D0D1BF4E897642CF2488</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>795263AA10AB6A93DE22B668</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>21C73C6B8202F415EAD29118</string>
+				<string>8BD9D0D1BF4E897642CF2488</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>84D118FC5DB1C79D9414D2F1</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>001886EA815B1B87686399DC</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Tests/Tests-Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>8BD9D0D1BF4E897642CF2488</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Tests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B40961755F5C77A781755D15</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>BB263893632B88844540AB79</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE4CF93DE6383EF1C59C3AC4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BC1A7D1BE8FCB4F510F0BC60</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Tests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CAE2C9D19571DE256073F25C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4C215AFB2D8C15982DCDC4CD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CB7113FFE621A8C3749483EA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>DaiStorage</string>
+			<key>target</key>
+			<string>1C0A71F31AD52DFE00D357FA</string>
+			<key>targetProxy</key>
+			<string>37F0E4E2C35D6388BFD3285B</string>
+		</dict>
+		<key>D6930AEEC9606B05F4118A9F</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>84D118FC5DB1C79D9414D2F1</string>
+				<string>0B2E34207D3322142B931E30</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D87EAFA2ED03C831A481CE22</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DaiStoragePropertyTests.m</string>
+			<key>path</key>
+			<string>Tests/DaiStoragePropertyTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D8C54F76CA829C48F0F95C70</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B40961755F5C77A781755D15</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>D92ADCEC5198D9B5FB575B6C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E6664358EC204A35A30DB687</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>001886EA815B1B87686399DC</string>
+				<string>BC1A7D1BE8FCB4F510F0BC60</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE4CF93DE6383EF1C59C3AC4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>main.m</string>
+			<key>path</key>
+			<string>Tests/main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5EC074120E316E058A64228</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>D8C54F76CA829C48F0F95C70</string>
+				<string>7441069DC4664DD3157805FF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>1C0A71EC1AD52DFE00D357FA</string>
+</dict>
+</plist>
