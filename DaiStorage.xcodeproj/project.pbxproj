@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		018CCA181AEE7BFD00D92EA5 /* DaiStoragePropertiesInObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C83A9151AEA58B7008800C7 /* DaiStoragePropertiesInObject.m */; };
 		1C0A71FA1AD52DFE00D357FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71F91AD52DFE00D357FA /* main.m */; };
 		1C0A71FD1AD52DFE00D357FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A71FC1AD52DFE00D357FA /* AppDelegate.m */; };
 		1C0A72051AD52DFE00D357FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A72041AD52DFE00D357FA /* Images.xcassets */; };
@@ -463,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				018CCA181AEE7BFD00D92EA5 /* DaiStoragePropertiesInObject.m in Sources */,
 				1CCF8B681AE78A4F00F8E229 /* Classroom.m in Sources */,
 				1CCF8B691AE78A4F00F8E229 /* Student.m in Sources */,
 				1CCF8B6A1AE78A4F00F8E229 /* Pet.m in Sources */,

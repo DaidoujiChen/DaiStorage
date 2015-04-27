@@ -22,7 +22,7 @@
 
 @interface DaiStorageProperty ()
 
-@property Class class;
+@property Class propertyClass;
 @property SEL setter;
 @property SEL getter;
 @property SEL importName;
@@ -34,15 +34,15 @@
 
 @implementation DaiStorageProperty
 
-- (Class)class {
+- (Class)propertyClass {
     if (!self.type) {
         return nil;
     }
     
-    if (!_class) {
-        _class = [self classFromCache:self.type];
+    if (!_propertyClass) {
+        _propertyClass = [self classFromCache:self.type];
     }
-    return _class;
+    return _propertyClass;
 }
 
 - (SEL)setter {
@@ -114,70 +114,70 @@
 #pragma mark - private instance method
 
 - (Class)classFromCache:(NSString *)className {
-    if ([[DaiStorageProperty classCache] objectForKey:className]) {
-        SelectorCache *selectorCache = [[DaiStorageProperty classCache] objectForKey:className];
+    if ([DaiStorageProperty classCache][className]) {
+        SelectorCache *selectorCache = [DaiStorageProperty classCache][className];
         return selectorCache.cacheClass;
     }
     else {
-        SelectorCache *selectorCacne = [SelectorCache new];
-        selectorCacne.cacheClass = NSClassFromString(className);
-        [[DaiStorageProperty classCache] setObject:selectorCacne forKey:className];
-        return selectorCacne.cacheClass;
+        SelectorCache *selectorCache = [SelectorCache new];
+        selectorCache.cacheClass = NSClassFromString(className);
+        [DaiStorageProperty classCache][className] = selectorCache;
+        return selectorCache.cacheClass;
     }
 }
 
 - (SEL)setterFromCache:(NSString *)name {
-    if ([[DaiStorageProperty setterCache] objectForKey:name]) {
-        SelectorCache *selectorCache = [[DaiStorageProperty setterCache] objectForKey:name];
+    if ([DaiStorageProperty setterCache][name]) {
+        SelectorCache *selectorCache = [DaiStorageProperty setterCache][name];
         return selectorCache.cacheSelector;
     }
     else {
-        SelectorCache *selectorCacne = [SelectorCache new];
+        SelectorCache *selectorCache = [SelectorCache new];
         NSString *selectorName = [NSString stringWithFormat:@"set%@%@:", [[name substringToIndex:1] uppercaseString], [name substringFromIndex:1]];
-        selectorCacne.cacheSelector = NSSelectorFromString(selectorName);
-        [[DaiStorageProperty setterCache] setObject:selectorCacne forKey:name];
-        return selectorCacne.cacheSelector;
+        selectorCache.cacheSelector = NSSelectorFromString(selectorName);
+        [DaiStorageProperty setterCache][name] = selectorCache;
+        return selectorCache.cacheSelector;
     }
 }
 
 - (SEL)getterFromCache:(NSString *)name {
-    if ([[DaiStorageProperty getterCache] objectForKey:name]) {
-        SelectorCache *selectorCache = [[DaiStorageProperty getterCache] objectForKey:name];
+    if ([DaiStorageProperty getterCache][name]) {
+        SelectorCache *selectorCache = [DaiStorageProperty getterCache][name];
         return selectorCache.cacheSelector;
     }
     else {
-        SelectorCache *selectorCacne = [SelectorCache new];
-        selectorCacne.cacheSelector = NSSelectorFromString(name);
-        [[DaiStorageProperty getterCache] setObject:selectorCacne forKey:name];
-        return selectorCacne.cacheSelector;
+        SelectorCache *selectorCache = [SelectorCache new];
+        selectorCache.cacheSelector = NSSelectorFromString(name);
+        [DaiStorageProperty getterCache][name] = selectorCache;
+        return selectorCache.cacheSelector;
     }
 }
 
 - (SEL)importSelectorFromCache:(NSString *)name {
-    if ([[DaiStorageProperty importSelectorCache] objectForKey:name]) {
-        SelectorCache *selectorCache = [[DaiStorageProperty importSelectorCache] objectForKey:name];
+    if ([DaiStorageProperty importSelectorCache][name]) {
+        SelectorCache *selectorCache = [DaiStorageProperty importSelectorCache][name];
         return selectorCache.cacheSelector;
     }
     else {
-        SelectorCache *selectorCacne = [SelectorCache new];
+        SelectorCache *selectorCache = [SelectorCache new];
         NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleImport%@:", name];
-        selectorCacne.cacheSelector = NSSelectorFromString(selectorString);
-        [[DaiStorageProperty importSelectorCache] setObject:selectorCacne forKey:name];
-        return selectorCacne.cacheSelector;
+        selectorCache.cacheSelector = NSSelectorFromString(selectorString);
+        [DaiStorageProperty importSelectorCache][name] = selectorCache;
+        return selectorCache.cacheSelector;
     }
 }
 
 - (SEL)exportSelectorFromCache:(NSString *)name {
-    if ([[DaiStorageProperty exportSelectorCache] objectForKey:name]) {
-        SelectorCache *selectorCache = [[DaiStorageProperty exportSelectorCache] objectForKey:name];
+    if ([DaiStorageProperty exportSelectorCache][name]) {
+        SelectorCache *selectorCache = [DaiStorageProperty exportSelectorCache][name];
         return selectorCache.cacheSelector;
     }
     else {
-        SelectorCache *selectorCacne = [SelectorCache new];
+        SelectorCache *selectorCache = [SelectorCache new];
         NSString *selectorString = [NSString stringWithFormat:@"daiStorage_ruleExport%@:", name];
-        selectorCacne.cacheSelector = NSSelectorFromString(selectorString);
-        [[DaiStorageProperty exportSelectorCache] setObject:selectorCacne forKey:name];
-        return selectorCacne.cacheSelector;
+        selectorCache.cacheSelector = NSSelectorFromString(selectorString);
+        [DaiStorageProperty exportSelectorCache][name] = selectorCache;
+        return selectorCache.cacheSelector;
     }
 }
 

@@ -29,7 +29,7 @@
 	__weak typeof(self) weakSelf = self;
     [[self.propertiesMapping allValues] enumerateObjectsUsingBlock:^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
         avoidPerformSelectorWarning(id currentProperty = [weakSelf performSelector:property.getter];)
-        switch ([DaiStorageTypeChecking on:property.class]) {
+        switch ([DaiStorageTypeChecking on:property.propertyClass]) {
             case DaiStorageTypeDaiStorage:
             {
                 avoidPerformSelectorWarning(currentProperty = [currentProperty performSelector:@selector(storeContents)];)
@@ -122,7 +122,7 @@
 - (void)removeAllObjects {
     __weak typeof(self) weakSelf = self;
     [[self.propertiesMapping allValues] enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
-        switch ([DaiStorageTypeChecking on:property.class]) {
+        switch ([DaiStorageTypeChecking on:property.propertyClass]) {
             case DaiStorageTypeDaiStorage:
             {
                 avoidPerformSelectorWarning(DaiStorage *daiStorage = [weakSelf performSelector:property.getter];)
@@ -179,7 +179,7 @@
 
 //根據 property 處理塞進去的物件
 - (void)restoreByProperty:(DaiStorageProperty *)property usingObject:(id)anObject {
-    switch ([DaiStorageTypeChecking on:property.class]) {
+    switch ([DaiStorageTypeChecking on:property.propertyClass]) {
         case DaiStorageTypeDaiStorage:
         {
             avoidPerformSelectorWarning(id currentProperty = [self performSelector:property.getter];
@@ -331,12 +331,12 @@
         __weak typeof(self) weakSelf = self;
         [[DaiStoragePropertiesInObject enumerate:self] enumerateObjectsUsingBlock: ^(DaiStorageProperty *property, NSUInteger idx, BOOL *stop) {
             weakSelf.propertiesMapping[property.name] = property;
-            switch ([DaiStorageTypeChecking on:property.class]) {
+            switch ([DaiStorageTypeChecking on:property.propertyClass]) {
                 case DaiStorageTypeDaiStorage:
-                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.class new]];)
+                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.propertyClass new]];)
                     break;
                 case DaiStorageTypeDaiStorageArray:
-                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.class new]];)
+                    avoidPerformSelectorWarning([weakSelf performSelector:property.setter withObject:[property.propertyClass new]];)
                     break;
                 default:
                     break;
