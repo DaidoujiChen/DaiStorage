@@ -23,17 +23,6 @@
 	return NSClassFromString(self.aClassName);
 }
 
-#pragma mark - instance method
-
-- (void)setAllowClass:(id)allowClass {
-	if ([allowClass respondsToSelector:@selector(isSubclassOfClass:)]) {
-		self.aClassName = NSStringFromClass(allowClass);
-	}
-	else {
-		self.aClassName = allowClass;
-	}
-}
-
 #pragma mark - Methods to Override
 
 #pragma mark * NSArray
