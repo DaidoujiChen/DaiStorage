@@ -25,6 +25,9 @@
         if (propName) {
             NSString *propertyName = [NSString stringWithCString:propName encoding:[NSString defaultCStringEncoding]];
             NSString *propertyType = [self readableTypeForEncoding:[self attributesDictionaryForProperty:property][@"T"]];
+            if (!NSClassFromString(propertyType)) {
+                [self registerClass:propertyType];
+            }
             [propertyNames addObject:[DaiStorageProperty propertyName:propertyName type:propertyType]];
         }
     }
@@ -33,6 +36,23 @@
 }
 
 #pragma mark - private class method
+
++ (void)registerClass:(NSString *)className {
+	Class superclass = (Class)objc_getClass("DaiStorageArray");
+	Class newClass = objc_allocateClassPair(superclass, [className UTF8String], 0);
+    Protocol *newProtocol = objc_getProtocol([[self splitToProtocol:className] UTF8String]);
+    if (!newProtocol) {
+        newProtocol = objc_allocateProtocol([[self splitToProtocol:className] UTF8String]);
+        objc_registerProtocol(newProtocol);
+    }
+    class_addProtocol(newClass, newProtocol);
+	objc_registerClassPair(newClass);
+}
+
++ (NSString *)splitToProtocol:(NSString *)name {
+    NSRange range = [name rangeOfString:@"Array"];
+    return [name substringToIndex:range.location];
+}
 
 #pragma mark * list properties in class
 

@@ -22,6 +22,8 @@
     //我念 3 年 2 班
     [Classroom shared].classID = @"三年二班";
     
+    [[Classroom shared].strings addObjectsFromArray:@[@"123", @"456"]];
+    
     //老師叫哈哈
     [Classroom shared].teacherName = @"哈哈";
     

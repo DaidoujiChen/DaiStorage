@@ -7,6 +7,7 @@
 //
 
 #import "DaiStorageArray.h"
+#import <objc/runtime.h>
 
 @interface DaiStorageArray ()
 
@@ -18,6 +19,7 @@
 @implementation DaiStorageArray
 
 - (Class)aClass {
+    NSAssert(self.aClassName, @"請先設定 class");
 	return NSClassFromString(self.aClassName);
 }
 
@@ -73,11 +75,24 @@
 	[self.internalArray replaceObjectAtIndex:index withObject:anObject];
 }
 
+#pragma mark - private instance method
+
+- (void)autoSetupClass {
+    Class cls = [self class];
+    unsigned count;
+    __unsafe_unretained Protocol **protocols = class_copyProtocolList(cls, &count);
+    if (count) {
+        self.aClassName = [NSString stringWithUTF8String:protocol_getName(protocols[0])];
+    }
+    free(protocols);
+}
+
 #pragma mark - life cycle
 
 - (id)init {
 	self = [super init];
 	if (self) {
+        [self autoSetupClass];
 		self.internalArray = [NSMutableArray array];
 	}
 	return self;

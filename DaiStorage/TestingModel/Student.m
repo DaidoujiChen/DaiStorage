@@ -19,8 +19,6 @@
         } whenExport:^NSString *(NSNumber *exportValue) {
             return [NSString stringWithFormat:@"ID is : %@", exportValue];
         }];
-        
-        [self.pets setAllowClass:[Pet class]];
     }
     return self;
 }

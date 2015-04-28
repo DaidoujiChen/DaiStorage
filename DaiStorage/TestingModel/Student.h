@@ -7,13 +7,14 @@
 //
 
 #import "DaiStorage.h"
-
 #import "Pet.h"
+
+DaiStorageArrayConverter(Pet)
 
 @interface Student : DaiStorage
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *studentID;
-@property (nonatomic, strong) DaiStorageArray *pets;
+@property (nonatomic, strong) PetArray *pets;
 
 @end

@@ -9,10 +9,14 @@
 #import "DaiStorage.h"
 #import "Student.h"
 
+DaiStorageArrayConverter(Student)
+DaiStorageArrayConverter(NSString)
+
 @interface Classroom : DaiStorage
 
 @property (nonatomic, strong) NSString *classID;
 @property (nonatomic, strong) NSString *teacherName;
-@property (nonatomic, strong) DaiStorageArray *students;
+@property (nonatomic, strong) StudentArray *students;
+@property (nonatomic, strong) NSStringArray *strings;
 
 @end

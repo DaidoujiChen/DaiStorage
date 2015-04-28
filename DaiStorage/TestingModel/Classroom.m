@@ -10,12 +10,4 @@
 
 @implementation Classroom
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        [self.students setAllowClass:[Student class]];
-    }
-    return self;
-}
-
 @end
